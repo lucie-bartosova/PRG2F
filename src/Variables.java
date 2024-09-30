@@ -1,6 +1,8 @@
 import java.sql.SQLOutput;
+import java.util.Random;
 import java.util.Scanner;
-
+import java.util.Random;
+import java.nio.file.Files;
 public class Variables {
     public static void main(String[] args) {
 
@@ -44,27 +46,27 @@ public class Variables {
 
 
         // cv. 2 - Jednoduchá kalkulačka (+, -, *, /)
-        while (true) {
+        /*while (true) {
 
-        System.out.println("Zadejte první číslo");
-        int prvni = sc.nextInt();
-        System.out.println("Zadejte druhé číslo");
-        int druhy = sc.nextInt();
+            System.out.println("Zadejte první číslo");
+            int prvni = sc.nextInt();
+            System.out.println("Zadejte druhé číslo");
+            int druhy = sc.nextInt();
 
 
-        System.out.println("Vyberte početní operaci (+,-,*,/");
-        String znaminko = sc.next();
+            System.out.println("Vyberte početní operaci (+,-,*,/");
+            String znaminko = sc.next();
 
-        if (znaminko.equals("+")) {
-            System.out.println(prvni+druhy);
-        } else if (znaminko.equals("-")) {
-            System.out.println(prvni-druhy);
-        } else if (znaminko.equals("*")) {
-            System.out.println(prvni*druhy);
-        } else if (znaminko.equals("/")) {
-            System.out.println(prvni/druhy);
-        }
-        }
+            if (znaminko.equals("+")) {
+                System.out.println(prvni+druhy);
+            } else if (znaminko.equals("-")) {
+                System.out.println(prvni-druhy);
+            } else if (znaminko.equals("*")) {
+                System.out.println(prvni*druhy);
+            } else if (znaminko.equals("/")) {
+                System.out.println(prvni/druhy);
+            }
+        }*/
 
         /*System.out.println(prvni+druhy);
         System.out.println(prvni-druhy);
@@ -72,5 +74,13 @@ public class Variables {
         System.out.println(prvni/druhy);*/
 
         sc.close();
+
+        Random rng = new Random();
+        int Nahoda = rng.nextInt(0, 2);
+        if (Nahoda == 0) {
+            System.out.println("Pana");
+        } else if (Nahoda == 1) {
+            System.out.println("Orel");
+        }
     }
 }
