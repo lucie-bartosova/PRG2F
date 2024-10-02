@@ -40,11 +40,42 @@ public class Hodina4 {
 
         if (cislo==0) {
             System.out.println("Vaše číslo nesmí být 0!!!");
-        } else if (cislo <100 && cislo>-100) {
+        } else if (!(cislo <100 && cislo>-100)) {
             System.out.println("Vaše číslo spadá do intervalu (-100;100)");
         } else {
             System.out.println("Vaše číslo nespadá do zadaného intervalu (-100;100)");
         }
+
+        //--------------------------------------------------------------
+
+        // Úkol 4 - Lístky do kina podle věku
+
+        System.out.println("Zadejte Váš věk.");
+        int vek = sc.nextInt();
+        int cenaListku = 200;
+        double sleva40 = 0.6d;
+        double sleva20 = 0.8d;
+
+        if (vek >= 1 && vek <=12 || vek >=70) {
+            System.out.println("Cena Vašeho lísku je: "+cenaListku*sleva40+" Kč.");
+        } else if (vek >= 13 && vek <= 18) {
+            System.out.println("Cena Vašeho lísku je: "+cenaListku*sleva20+" Kč.");
+        } else {
+            System.out.println("Cena Vašeho lísku je: "+cenaListku+" Kč.");
+        }
+
+        //--------------------------------------------------------------
+
+        // Úkol 5 - Pozemek
+
+        System.out.println("Zadejte délku parcely.");
+        int delka = sc.nextInt();
+        System.out.println("Zadejte šířku parcely");
+        int sirka = sc.nextInt();
+
+        int jedenMetrCtverecni = 640;
+
+        System.out.println("Cena za Vaši parcelu je: "+(delka*sirka)*jedenMetrCtverecni+" Kč.");
 
     }
 
