@@ -40,11 +40,13 @@ public class Hodina4 {
 
         if (cislo==0) {
             System.out.println("Vaše číslo nesmí být 0!!!");
-        } else if (!(cislo <100 && cislo>-100)) {
+        } else if (cislo <100 && cislo>-100) {
             System.out.println("Vaše číslo spadá do intervalu (-100;100)");
         } else {
             System.out.println("Vaše číslo nespadá do zadaného intervalu (-100;100)");
         }
+        // pro negaci to celé dát do !()
+
 
         //--------------------------------------------------------------
 
