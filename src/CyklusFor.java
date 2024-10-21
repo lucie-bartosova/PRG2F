@@ -29,11 +29,13 @@ public class CyklusFor {
         // Vypište malou násobilku pro čísla 1-10
             // Cyklus For
             for (int n = 1; n <= 10 ; n++) {
+                System.out.print("|");
                 for (int p = 1; p <= 10 ; p++) {
-                    System.out.print(n*p+" ");
+                    System.out.print(n*p);
                     if (n*p <= 9) {
                         System.out.print(" ");
                     }
+                    System.out.print("|");
                 }
                 System.out.println();
             }
