@@ -82,7 +82,7 @@ public class CyklusFor {
 
             }
             System.out.println("Faktoriál: " + nasobek);
-            */
+
 
 
 
@@ -102,5 +102,34 @@ public class CyklusFor {
             }
             System.out.println("Pravděpodobnost hlavy je: " + hlava/10000.0 + " %");
             System.out.println("Pravděpodobnost orla je: " + orel/10000.0 + " %");
+
+
+
+            // Úkol 5 - Hod kostkou (Pravděpodnost hodu 3)
+            Random hodKostkou = new Random();
+            int pravdepodobnost = 0;
+
+            for (int kostka = 0; kostka <= 10000000 ; kostka++) {
+                int nahoda2 = hodKostkou.nextInt(0, 7);
+                if (nahoda2 == 3) {
+                    pravdepodobnost++;
+                }
+            }
+            System.out.println("Pravděpodobnost hody čísla 3 je: " + pravdepodobnost/100000.0 + " %");
+
+         */
+
+            // Úkol 6 - trojúhelník z *
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("Zadejte prosím číslo, které bude reprezentovat výšku trojúhelníku.");
+            int cisloOdUzivatele = sc.nextInt();
+
+            for (int vyskaTrojuhelniku = 1; vyskaTrojuhelniku <= cisloOdUzivatele  ; vyskaTrojuhelniku++) {
+                for (int PocetHvezdicek = 1; PocetHvezdicek <= vyskaTrojuhelniku; PocetHvezdicek++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
     }
 }
