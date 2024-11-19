@@ -3,133 +3,140 @@ import java.util.Scanner;
 
 public class CyklusFor {
     public static void main(String[] args) {
-        /*// Vypište násobky 5ti od 1 do 1000
-            // Pomocí cyklu While
-            int i = 0;
-            while(i <= 1000){
-                System.out.println(i);
-                i += 5;
-            }
 
-            // Pomocí cyklu For
-            for (int j = 0; j <= 1000 ; j+= 5) {
-                System.out.println(j);
+        // Vypište násobky 5ti od 1 do 1000
+        {
+            for (int a = 0; a <= 1000 ; a += 5) {
+                System.out.println(a);
             }
+        }
 
         // Vypište všechna čísla od 100 do 0
-            //Cyklus For
-            for (int k = 100; k >= 0 ; k--) {
-                System.out.println(k);
+        {
+            for (int b = 100; b >= 0 ; b--) {
+                System.out.println(b);
             }
+        }
 
         // Vypište všechna čísla od 100^2 do 0^2
-            // Cyklus For
-            for (int l = 100; l >= 0; l--) {
-                System.out.println(l*l);
-                // System.out.println(Math.pow(l, 1.5));
+        {
+            for (int c = 100; c <= 0 ; c--) {
+                System.out.println(c*c);
             }
+        }
 
         // Vypište malou násobilku pro čísla 1-10
-            // Cyklus For
-            for (int m = 1; m <= 10 ; m++) {
-                System.out.print("|");
-                for (int p = 1; p <= 10 ; p++) {
-                    System.out.print(m*p);
-                    if (m*p <= 9) {
-                        System.out.print(" ");
-                    }
-                    System.out.print("|");
+        {
+            for (int d = 1; d <= 10 ; d++) {
+                for (int e = 1; e <= 10 ; e++) {
+                    System.out.print(d*e + " ");
                 }
                 System.out.println();
             }
+        }
 
-        // Cvičení
-            // Úkol 1 - Funkce
-            for (int n = -50; n <= 50 ; n++) {
-                int y = 2 * n - 3;
-                System.out.println("Hodnota y: " + y);
+        // Funkce (y = 2x - 3)
+        {
+            for (int f = -50; f <= 50 ; f++) {
+                int y = 2 * f - 3;
+                System.out.println("Pro x = " + f + " se funkce: y = " + y);
             }
+        }
 
-            // Úkol 2 - součet od 1 do čísla od uživatele
-            System.out.println("Napište libovolné číslo");
+        // Součet od 1 do čísla od uživatele
+        {
             Scanner sc = new Scanner(System.in);
-            int o = sc.nextInt();
+
+            System.out.println("Napište libovolné číslo.");
+            int g = sc.nextInt();
+
             int soucet = 0;
 
-            for (int p = 1; p <= o ; p++) {
-                soucet += p;
-                if (p != o) {
-                    System.out.print(p +" + ");
+            for (int h = 1; h <= g ; h++) {
+                soucet += h;
+                if (h < g) {
+                    System.out.print(h + " + ");
                 } else {
-                    System.out.println(p);
+                    System.out.print(h);
                 }
             }
-            System.out.println("Součet: " + soucet);
+            System.out.print(" = " + soucet);
+            System.out.println();
+        }
 
-            // Úkol 3
-            System.out.println("Napište libovolné číslo");
+        // Faktoriál čísla od uživatele
+        {
             Scanner sc = new Scanner(System.in);
-            int q = sc.nextInt();
-            int nasobek = 1;
 
-            for (int r = q; r > 0 ; r--) {
-                nasobek *= r;
-                if (r != 1) {
-                    System.out.print(r +" * ");
+            System.out.println("Zadejte libovolné číslo.");
+            int i = sc.nextInt();
+
+            int faktorial = 1;
+
+            for (int j = i; j >= 1 ; j--) {
+                faktorial *= j;
+                if (j != 1) {
+                    System.out.print(j + " * ");
                 } else {
-                    System.out.println(r);
+                    System.out.print(j);
                 }
-
             }
-            System.out.println("Faktoriál: " + nasobek);
+            System.out.print(" = " + faktorial);
+            System.out.println();
+        }
 
-
-
-
-            // Úkol 4 - Hlava/Orel - 1mil mincí
-            int hlava = 0;
+        // Hod mincí - Pravděpodobnost
+        {
+            int panna = 0;
             int orel = 0;
-            Random hodMinci = new Random();
+            Random k = new Random();
 
-
-            for (int mince = 0; mince <= 1000000 ; mince++) {
-               int nahoda = hodMinci.nextInt(0, 2);
-               if ( nahoda == 1 ) {
-                   hlava++;
-               } else {
-                   orel++;
-               }
-            }
-            System.out.println("Pravděpodobnost hlavy je: " + hlava/10000.0 + " %");
-            System.out.println("Pravděpodobnost orla je: " + orel/10000.0 + " %");
-
-
-
-            // Úkol 5 - Hod kostkou (Pravděpodnost hodu 3)
-            Random hodKostkou = new Random();
-            int pravdepodobnost = 0;
-
-            for (int kostka = 0; kostka <= 10000000 ; kostka++) {
-                int nahoda2 = hodKostkou.nextInt(0, 7);
-                if (nahoda2 == 3) {
-                    pravdepodobnost++;
+            for (int l = 0; l <= 1000000; l++) {
+                int nahoda = k.nextInt(0,2);
+                if (nahoda == 1) {
+                    panna++;
+                } else {
+                    orel++;
                 }
             }
-            System.out.println("Pravděpodobnost hody čísla 3 je: " + pravdepodobnost/100000.0 + " %");
+            System.out.println("Pravděpodobnost panny je: " + panna/10000.0 + " %");
+            System.out.println("Pravděpodobnost orla je: " + orel/10000.0 + " %");
+        }
 
-         */
+        // Hod kostkou - Pravěpodobnost hodu čísla 3
+        {
+            // l = Hod kostkou
+            // m = Pravděpodobnost
+            // n = Kostka
+            // o = Náhoda
 
-            // Úkol 6 - trojúhelník z *
+            Random l = new Random();
+            int m = 0;
+
+            for (int n = 0; n <= 10000000 ; n++) {
+                int o = l.nextInt(0,7);
+                if (o == 3) {
+                    m++;
+                }
+            }
+            System.out.println("Pravděpodobnost hodu čísla 3 je: " + m/100000.0 + " %");
+        }
+
+        // Bonus - Trojúhelník z *
+        {
+            // p = Uživatelem požadovaná výška
+            // q = Výška trojúhelníku
+            // r = Počet hvězdiček
             Scanner sc = new Scanner(System.in);
+            System.out.println("Zadejte prosím výsku trojúhelníku");
+            int p = sc.nextInt();
 
-            System.out.println("Zadejte prosím číslo, které bude reprezentovat výšku trojúhelníku.");
-            int cisloOdUzivatele = sc.nextInt();
-
-            for (int vyskaTrojuhelniku = 1; vyskaTrojuhelniku <= cisloOdUzivatele  ; vyskaTrojuhelniku++) {
-                for (int PocetHvezdicek = 1; PocetHvezdicek <= vyskaTrojuhelniku; PocetHvezdicek++) {
+            for (int q = 1; q <= p ; q++) {
+                for (int r = 1; r < q ; r++) {
                     System.out.print("*");
                 }
                 System.out.println();
             }
+        }
     }
 }
