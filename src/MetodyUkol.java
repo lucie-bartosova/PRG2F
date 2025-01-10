@@ -4,24 +4,24 @@ public class MetodyUkol {
         boolean valid = false;
 
         if (password.length() < 8) {
-            System.out.println("Délka hesla nebyla splněna, zadejte heslo o minimální délce 8 znaků");
+            System.out.println("Heslo nesplňuje jednu z podmínek: \"délka hesla\"");
             return;
         }
 
         if (password.toLowerCase().contains("heslo")) {
-            System.out.println("Heslo nesmí obsahovat slovo \"Heslo\".");
+            System.out.println("Heslo nesplňuje jednu z podmínek: \"obsahuje zakázané slovo\"");
             return;
         }
 
         if (!password.matches(".*\\d.*")) {
-            System.out.println("Heslo musí obsahovat libovolné číslo.");
+            System.out.println("Heslo nesplňuje jednu z podmínek: \"neobsahuje žádné číslo\"");
             return;
         }
 
         valid = true;
 
         if (valid) {
-            System.out.println( password + " splňuje všechny podmínky!");
+            System.out.println("Heslo je v pořádku");
         }
     }
 
