@@ -26,9 +26,9 @@ public class MetodyUkol {
     }
 
     public static void main(String[] args) {
-        validatePassword("HesloHeslo123"); //nesplněno - obsahuje slovo "heslo"
-        validatePassword("Valid"); //nesplněno - neobsahuje >8 znaků
-        validatePassword("ValidValid"); //nesplněno - neobsahuje žádné číslo
-        validatePassword("JaFaktNevim123"); //splněno
+        validatePassword("HesloHeslo123");
+        validatePassword("Valid");
+        validatePassword("ValidValid");
+        validatePassword("JaFaktNevim123");
     }
 }
