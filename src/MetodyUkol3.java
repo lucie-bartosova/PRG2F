@@ -46,10 +46,12 @@ public class MetodyUkol3 {
 
         System.out.println("Navrhované uživatelské jméno: " + uzivatelskeJmeno);
 
-        if (uzivatelskeJmeno.length() > 4) {
-            System.out.println("Vaše uživatelské jméno je v pořádku.");
+        if (uzivatelskeJmeno.length() < 4) {
+            System.out.println("Uživatelské jméno je příliš krátké. Přidejte například další znak!");
+        } else if (!(uzivatelskeJmeno.startsWith("@"))) {
+            System.out.println("Vaše uživatelské jméno NEzačíná znakem \"@\"!");
         } else {
-            System.out.println("Uživatelské jméno je příliš krátké. Přidejte další znak!");
+            System.out.println("Vaše uživatelské jméno je v pořádku.");
         }
 
     }
