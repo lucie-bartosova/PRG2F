@@ -21,8 +21,7 @@ public class MetodyUkol4 {
         System.out.println("Zadejte číslo:");
         int cislo = sc.nextInt();
 
-        int soucet = sumOfDigits(cislo);
-        System.out.println("Součet číslic čísla " + cislo + " je: " + soucet);
+        System.out.println("Součet číslic čísla " + cislo + " je: " + sumOfDigits(cislo));
 
     }
 }

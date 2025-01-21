@@ -43,7 +43,14 @@ public class MetodyUkol3 {
         String prijmeni = sc.next();
 
         String uzivatelskeJmeno = uzivatelskeJmeno(jmeno, prijmeni);
+
         System.out.println("Navrhované uživatelské jméno: " + uzivatelskeJmeno);
+
+        if (uzivatelskeJmeno.length() > 4) {
+            System.out.println("Vaše uživatelské jméno je v pořádku.");
+        } else {
+            System.out.println("Uživatelské jméno je příliš krátké. Přidejte další znak!");
+        }
 
     }
 
