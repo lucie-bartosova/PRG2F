@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MetodyUkol4 {
+public class Leden_Metody_DÚ3 {
 
     // Úkol 4 - součet číslic čísla
 

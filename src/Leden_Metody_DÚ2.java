@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class MetodyUkol3 {
+public class Leden_Metody_DÚ2 {
 
     // Úkol 3 - generátor uživatelského jména
 

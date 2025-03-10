@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Metody {
+public class Leden_Metody_Úvod {
 
     static int hodKostky() {
 

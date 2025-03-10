@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Pretizeni {
+public class Leden_Metody_Přetížení {
 
 
 

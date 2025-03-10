@@ -1,4 +1,4 @@
-public class MetodyUkol {
+public class Leden_Metody_DÚ {
 
     static void validatePassword(String password) {
         boolean valid = false;
